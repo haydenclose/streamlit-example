@@ -22,12 +22,9 @@ Wrecks = pd.read_csv(in_csv)
 Wreck_name = 'HMS REPULSE'
 Lat = pd.to_numeric(Wrecks.loc[Wrecks['Wreck_ID'] == Wreck_name]['Latitude'])               # Get the latitude of selected wreck
 Lon = Wrecks.loc[Wrecks['Wreck_ID'] == Wreck_name['Longitude']                             # Get the longitude of selected wreck
-measure = plugins.MeasureControl(position="bottomleft", active_color="orange")
-measure.add_to(m)
-m.to_streamlit(height=700)
 total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
 num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
-
+st.write(float(Lat),float(Lon))
 Point = namedtuple('Point', 'x y')
 data = []
 
