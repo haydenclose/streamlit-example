@@ -14,7 +14,17 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
-
+import pandas as pd
+import os
+st.title("fudge you streamlit")
+in_csv = os.path.join(os.getcwd(), "data/Wreck Database_V2.4.csv")
+Wrecks = pd.read_csv(in_csv)
+Wreck_name = 'HMS REPULSE'
+Lat = pd.to_numeric(Wrecks.loc[Wrecks['Wreck_ID'] == Wreck_name]['Latitude'])               # Get the latitude of selected wreck
+Lon = Wrecks.loc[Wrecks['Wreck_ID'] == Wreck_name['Longitude']                             # Get the longitude of selected wreck
+measure = plugins.MeasureControl(position="bottomleft", active_color="orange")
+measure.add_to(m)
+m.to_streamlit(height=700)
 total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
 num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
 
