@@ -1,0 +1,30 @@
+Owner,Wreck_ID,Catergory,Latitude,Longitude,Depth,Cargo
+MOD,SS DERBENT,Priority,53.47339,-4.23566,45m,3700 tons of fuel oil
+MOD,HMS PRINCE OF WALES,Priority,3.517583,104.464383,~68m,
+MOD,HMS REPULSE,Priority,3.620619,104.345181,~68m,
+MOD,RFA WAR MEHTAR,Priority,52.605,2.14833,Between 26.5 m and 40 m with 2-3 m scour.,7000 tonnes Admiralty fuel oil 
+MOD,RFA ATHELSTANE,Priority,7.33252,81.9396,42m,6096 tonnes Admiralty fuel oil 
+DFT,MV INVERDARGLE (Bow),Priority,51.28223,-3.7793,17-32 m,"2,554 tonnes of high-octane aviation fuel (Larn and Larn, 1995)."
+DFT,MV INVERDARGLE (Stern),Priority,51.27605,-3.77208,17-32 m,"2,554 tonnes of high-octane aviation fuel (Larn and Larn, 1995)."
+DFT,SS CONCH,Priority,50.13978,-2.59653,60 m,"7,000 tonnes of Fuel oil"
+DFT,MV REALF,Secondary,53.907,4.408,44m,"6,444 tonnes gasolene, 3,400 tonnes petrol and 1,608 tonnes kerosene"
+DFT,SS SAN HILARIO,Secondary,51.94278,-13.94833," 368 m
+(minimum), general depth 388 m (UKHO 55990)."," 15,000 tons of petroleum (Fuel Oil)"
+DFT,MV FREDERICK S. FALES,Secondary,55.5,-13.66667,"2,650 m"," 13,700 tons of diesel oil, secondary sources
+describe the cargo as 13,849 tons of Admiralty fuel oil."
+DFT,MV LANGUEDOC,Secondary,59.23333,-17.85,1000m,"13,700 tons of Admiralty fuel oil and an unknown quantity of diesel."
+DFT,MV MEXICO,Tertiary,51.88335,1.62722,22m,"3,823 tons of fuel oil (but wreck is broken up now)"
+DFT,SS STANMOUNT,Tertiary,52.66322,2.02427,"17.2m (minimum), general depth 24.0m (UKHO 11062). "," 5,300 tons of creosote"
+MOD,SS COIMBRA,Unasssesed,40.4014,-72.3706,,
+MOD,HMS ROYAL OAK,Unasssesed,58.93078,-2.98333,20m,"removal of approximately 1,315 m3  has 697 tonnes of fuel oil left approx"
+MOD,SS PRUDENTIA,Unasssesed,58.8473,-3.13258,12m,Admiralty fuel oil 
+MOD,HMS HERMES,Unasssesed,7.81535,81.73197,50m,"2000 tonnes fuel oil
+7000 gallons petrol"
+MOD,SS BRITISH SERGEANT,Unasssesed,8.0449,81.552,,
+DFT,SS VIRGILIA,Unasssesed,52.76177,2.16748,"Least depth 33.3 m, general depth 49.0 m (UKHO 11099)","7,475 tons of kerosene and gasoline"
+USN,USS ATLANTA,Unasssesed,-9.40155,159.988618,130,
+USN,USS ATLANTA,Unasssesed,-9.383333,159.966667,,
+USN,USS JOHN PENN,Unasssesed,-9.39138889,160.0483333,,
+USN,USS JOHN PENN,Unasssesed,-9.63222,160.1938889,,
+IJN,AZUMASAN MARU ,,-9.3514,159.8456,,
+MOD,M2 Submarine,unassessed,50.593167,-2.566167,36,unknown
