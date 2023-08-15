@@ -23,7 +23,7 @@ lat = pd.to_numeric(wrecks.loc[wrecks['Wreck_ID'] == wreck_name]['Latitude'])   
 lon = pd.to_numeric(wrecks.loc[wrecks['Wreck_ID'] == wreck_name]['Longitude'])                             # Get the longitude of selected wreck
 total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
 num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
-st.write(float(Lat),float(Lon))
+st.write(lat,lon)
 Point = namedtuple('Point', 'x y')
 data = []
 
