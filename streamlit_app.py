@@ -18,10 +18,10 @@ import pandas as pd
 import os
 st.title("fudge you streamlit")
 in_csv = os.path.join(os.getcwd(), "data/Wreck Database_V2.4.csv")
-Wrecks = pd.read_csv(in_csv)
-Wreck_name = 'HMS REPULSE'
-Lat = pd.to_numeric(Wrecks.loc[Wrecks['Wreck_ID'] == Wreck_name]['Latitude'])               # Get the latitude of selected wreck
-Lon = Wrecks.loc[Wrecks['Wreck_ID'] == Wreck_name['Longitude']                             # Get the longitude of selected wreck
+wrecks = pd.read_csv(in_csv)
+wreck_name = 'HMS REPULSE'
+lat = pd.to_numeric(wecks.loc[wrecks['wreck_ID'] == wreck_name]['Latitude'])               # Get the latitude of selected wreck
+lon = wrecks.loc[wrecks['wreck_ID'] == wreck_name['Longitude']                             # Get the longitude of selected wreck
 total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
 num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
 st.write(float(Lat),float(Lon))
