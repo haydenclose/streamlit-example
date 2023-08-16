@@ -51,20 +51,20 @@ def Previous_button():
 
 if col2.button("Previous image"):
     Previous_button()
-#StartDate   = '01-01-2014'
-#EndDate = '01-04-2016'
+StartDate   = '01-01-2014'
+EndDate = '01-04-2016'
 #measure = plugins.MeasureControl(position="bottomleft", active_color="orange")
 #measure.add_to(m)
 
-#if Satellite_selection == 'SENTINEL-1' or Satellite_selection == 'BOTH':                               # If to see if create feature collection with S1 or both
-#    S1ImgCol = (ee.ImageCollection('COPERNICUS/S1_GRD').                                            # Selects the Sentinel 1 image collection
-#      filterDate(str(StartDate), str(EndDate)).                                         # Selects only the dates from time period chosen above
-#     filterMetadata('instrumentMode', 'equals', 'IW').                                             # Selects the instrument mode that we want
- #     filter(ee.Filter.eq('orbitProperties_pass', str(Orbit_selection))).                               # Selects the orbit path we want
- #     filterBounds(geom))                                                                           # Selects only images that our wreck is contained within
-#    S1ImgCol = S1ImgCol.map(add_S1_date)                                                            # Adds the image date to image metadata in easy way to read
-# #   ImgCol_gammaMap = S1ImgCol.map(gammaMap)                                                        # Process the ImageCollection through the gammaMap algorithm
-# #   ImgCol_gammaMap = ImgCol_gammaMap.map(add_S1Gamma_date)                                         # Gamma function removes alot of the metadata so add date back in
+if Satellite_selection == 'SENTINEL-1' or Satellite_selection == 'BOTH':                               # If to see if create feature collection with S1 or both
+    S1ImgCol = (ee.ImageCollection('COPERNICUS/S1_GRD').                                            # Selects the Sentinel 1 image collection
+     filterDate(str(StartDate), str(EndDate)).                                         # Selects only the dates from time period chosen above
+     filterMetadata('instrumentMode', 'equals', 'IW').                                             # Selects the instrument mode that we want
+     filter(ee.Filter.eq('orbitProperties_pass', str(Orbit_selection))).                               # Selects the orbit path we want
+     filterBounds(geom))                                                                           # Selects only images that our wreck is contained within
+    S1ImgCol = S1ImgCol.map(add_S1_date)                                                            # Adds the image date to image metadata in easy way to read
+    ImgCol_gammaMap = S1ImgCol.map(gammaMap)                                                        # Process the ImageCollection through the gammaMap algorithm
+    ImgCol_gammaMap = ImgCol_gammaMap.map(add_S1Gamma_date)                                         # Gamma function removes alot of the metadata so add date back in
 
 #if Satellite_selection == 'SENTINEL-2' or Satellite_selection == 'BOTH':                               # If to see if create feature collection with S2 or both
 #   S2ImgCol = (ee.ImageCollection('COPERNICUS/S2_HARMONIZED').                                       # Selects the Sentinel 2 image collection
