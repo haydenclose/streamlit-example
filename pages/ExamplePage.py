@@ -58,8 +58,3 @@ m = leafmap.Map(
 )
 measure = plugins.MeasureControl(position="bottomleft", active_color="orange")
 measure.add_to(m)
-
-
-
-
-
