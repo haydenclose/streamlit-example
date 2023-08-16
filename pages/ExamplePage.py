@@ -8,7 +8,6 @@ import streamlit as st
 import os
 import leafmap.foliumap as leafmap
 import folium.plugins as plugins
-import gcloud
 ee.Authenticate()
 """
 # Welcome to Streamlit!
