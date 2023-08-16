@@ -7,6 +7,7 @@ import os
 import leafmap.foliumap as leafmap
 import folium.plugins as plugins
 import ee
+from io import StringIO
 """
 # Welcome to Streamlit!
 
