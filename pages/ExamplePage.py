@@ -96,16 +96,16 @@ m = leafmap.Map(
 
 # MultiMap = geemap.Map()                                                                            # Base map
 # MultiMap.centerObject(geom, 10)                                                                    # Center the map on the wreck
-m.add_points_from_xy(Wrecks, x="Longitude", y="Latitude")                                   # Add wreck locations
+m.add_points_from_xy(wrecks, x="Longitude", y="Latitude")                                   # Add wreck locations
 #m = 0                                                                                              # Number to assign polygon number
 n = 0                                                                                              # Used to add or subtract to change the image
-img = ee.Image(ee.List(ImgList).get(n))                                                            # Get the image from the image list to display the first image
-if ee.Image(img).getString('Satellite').getInfo()  == 'SENTINEL-1A' or ee.Image(img).getString('Satellite').getInfo()  == 'SENTINEL-1B': # If S1 use below parmaeters
-  img = ee.Image(ee.List(ImgList).get(n)).select('VV')                                              # Selects the VV band
-  img_params = {'bands':'VV', 'min':-25, 'max':5}                                                   # Display setting for the VV band
-else: img_params = {'min': 0,'max': 3000,'bands': ['B4','B3','B2']}                                # Otherwise select the RGB bands
+#img = ee.Image(ee.List(ImgList).get(n))                                                            # Get the image from the image list to display the first image
+#if ee.Image(img).getString('Satellite').getInfo()  == 'SENTINEL-1A' or ee.Image(img).getString('Satellite').getInfo()  == 'SENTINEL-1B': # If S1 use below parmaeters
+#  img = ee.Image(ee.List(ImgList).get(n)).select('VV')                                              # Selects the VV band
+#  img_params = {'bands':'VV', 'min':-25, 'max':5}                                                   # Display setting for the VV band
+#else: img_params = {'min': 0,'max': 3000,'bands': ['B4','B3','B2']}                                # Otherwise select the RGB bands
  #IMgdate = img.date()                                                                               # Get the acquisition date of the image
  #date_string = IMgdate.format('YYYY-MM-dd').getInfo()                                               # Format the date as a string
-m.addLayer(img, img_params, 'Satellite Image',True)                                         # Add the image to the map
+#m.addLayer(img, img_params, 'Satellite Image',True)                                         # Add the image to the map
 m.to_streamlit(height=600)
 
