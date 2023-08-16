@@ -1,3 +1,4 @@
+import ee
 from collections import namedtuple
 import altair as alt
 import math
