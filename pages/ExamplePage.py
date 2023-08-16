@@ -51,7 +51,7 @@ if col2.button("Previous image"):
     
 m = leafmap.Map(
     center=[float(lat), float(lon)],
-    zoom=int(zoom),
+    zoom=int(10),
     locate_control=True,
     draw_control=True,
     measure_control=False,
