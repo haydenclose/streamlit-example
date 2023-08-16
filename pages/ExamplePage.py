@@ -28,10 +28,10 @@ S1Thresh = st.sidebar.slider("S1 Threshold:", -30.0, -15.0,(-30.0,-23.5))
 S2Thresh = st.sidebar.slider("S2 threshold:", 1500, 7000,(2350,3000))
 
 Sat_options = ['SENTINEL-1','SENTINEL-2', 'BOTH']
-Satellite_selection = st.radio("Select an Satellite:", Sat_options, index = 2)
+Satellite_selection = st.sidebar.radio("Select an Satellite:", Sat_options, index = 2)
 
 Orbit_options = ['ASCENDING','DESCENDING','BOTH']
-Orbit_selection = st.sidebar.radio("Select an orbit:", Sat_options, index = 2)
+Orbit_selection = st.sidebar.radio("Select an orbit:", Orbit_options, index = 2)
 
 max_cloud_cover = st.sidebar.slider("Max cloud %:", 0, 1000,100,1)
 Dilation = st.sidebar.slider("Pixel Dilation factor:", 0, 20,3,1)
