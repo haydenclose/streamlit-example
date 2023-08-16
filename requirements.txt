@@ -4,4 +4,6 @@ pandas
 streamlit
 geopandas
 leafmap
-
+folium==0.13.0
+geemap[extra]
+streamlit-folium
