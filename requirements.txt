@@ -1,3 +1,4 @@
+ee
 altair
 pandas
 streamlit
