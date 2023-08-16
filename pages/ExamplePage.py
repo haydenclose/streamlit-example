@@ -22,10 +22,8 @@ wreck_names = wrecks["Wreck_ID"].values.tolist()
 wreck_name = st.selectbox("Select a wreck:", wreck_names, index = 2)
 lat = pd.to_numeric(wrecks.loc[wrecks['Wreck_ID'] == wreck_name]['Latitude'])               # Get the latitude of selected wreck
 lon = pd.to_numeric(wrecks.loc[wrecks['Wreck_ID'] == wreck_name]['Longitude'])                             # Get the longitude of selected wreck
-S1Tuple = (-30,-23.5)
-S2Tuple = (-2350,3000)
-S1Thresh = st.slider("S1 Threshold:", -30, -15,S1Tuple,.1)
-S2Thresh = st.slider("S2 threshold:", 1500, 7000,S2Tuple,25)
+S1Thresh = st.slider("S1 Threshold:", -30, -15,(-30,-23.5),0.25)
+S2Thresh = st.slider("S2 threshold:", 1500, 7000,(2350,3000),25)
 
 Sat_options = ['SENTINEL-1','SENTINEL-2', 'BOTH']
 Satellite_selection = st.radio("Select an Satellite:", Sat_options, index = 2)
