@@ -6,7 +6,7 @@ import streamlit as st
 import os
 import leafmap.foliumap as leafmap
 import folium.plugins as plugins
-import ee
+
 """
 # Welcome to Streamlit!
 
