@@ -54,36 +54,36 @@ EndDate = '01-04-2016'
 #measure = plugins.MeasureControl(position="bottomleft", active_color="orange")
 #measure.add_to(m)
 
-if Satellite_selection == 'SENTINEL-1' or Satellite_selection == 'BOTH':                               # If to see if create feature collection with S1 or both
-    S1ImgCol = (ee.ImageCollection('COPERNICUS/S1_GRD').                                            # Selects the Sentinel 1 image collection
-      filterDate(str(StartDate), str(EndDate)).                                         # Selects only the dates from time period chosen above
-      filterMetadata('instrumentMode', 'equals', 'IW').                                             # Selects the instrument mode that we want
-      filter(ee.Filter.eq('orbitProperties_pass', str(Orbit_selection))).                               # Selects the orbit path we want
-      filterBounds(geom))                                                                           # Selects only images that our wreck is contained within
+#if Satellite_selection == 'SENTINEL-1' or Satellite_selection == 'BOTH':                               # If to see if create feature collection with S1 or both
+#    S1ImgCol = (ee.ImageCollection('COPERNICUS/S1_GRD').                                            # Selects the Sentinel 1 image collection
+#      filterDate(str(StartDate), str(EndDate)).                                         # Selects only the dates from time period chosen above
+#     filterMetadata('instrumentMode', 'equals', 'IW').                                             # Selects the instrument mode that we want
+ #     filter(ee.Filter.eq('orbitProperties_pass', str(Orbit_selection))).                               # Selects the orbit path we want
+ #     filterBounds(geom))                                                                           # Selects only images that our wreck is contained within
 #    S1ImgCol = S1ImgCol.map(add_S1_date)                                                            # Adds the image date to image metadata in easy way to read
 # #   ImgCol_gammaMap = S1ImgCol.map(gammaMap)                                                        # Process the ImageCollection through the gammaMap algorithm
 # #   ImgCol_gammaMap = ImgCol_gammaMap.map(add_S1Gamma_date)                                         # Gamma function removes alot of the metadata so add date back in
 
-if Satellite_selection == 'SENTINEL-2' or Satellite_selection == 'BOTH':                               # If to see if create feature collection with S2 or both
-   S2ImgCol = (ee.ImageCollection('COPERNICUS/S2_HARMONIZED').                                       # Selects the Sentinel 2 image collection
-     filterDate(str(StartDate), str(EndDate)).                                          # Selects only the dates from time period chosen above
-     filterBounds(geom).                                                                            # Selects only images that our wreck is contained within
-     filterMetadata('CLOUDY_PIXEL_PERCENTAGE', 'less_than', max_cloud_cover))                 # Filter image collection by cloud cover
+#if Satellite_selection == 'SENTINEL-2' or Satellite_selection == 'BOTH':                               # If to see if create feature collection with S2 or both
+#   S2ImgCol = (ee.ImageCollection('COPERNICUS/S2_HARMONIZED').                                       # Selects the Sentinel 2 image collection
+#     filterDate(str(StartDate), str(EndDate)).                                          # Selects only the dates from time period chosen above
+#     filterBounds(geom).                                                                            # Selects only images that our wreck is contained within
+#     filterMetadata('CLOUDY_PIXEL_PERCENTAGE', 'less_than', max_cloud_cover))                 # Filter image collection by cloud cover
 #   S2ImgCol = S2ImgCol.map(add_S2_date)                                                              # Add the image date to the metadata in an easy way to read
 
-if Satellite_selection == 'BOTH':                                                                    # If both S1 and S2 combine collections
-   ImageCol = S1ImgCol.merge(S2ImgCol)                                                              # Merge ImageCollections, note raw S1
-   ImageCol = ImageCol.sort("Date")                                                                 # Order images by Date
-   ImgList = ee.ImageCollection(ImageCol).toList(99999)                                             # Creates a list of the images to select from
+#if Satellite_selection == 'BOTH':                                                                    # If both S1 and S2 combine collections
+#   ImageCol = S1ImgCol.merge(S2ImgCol)                                                              # Merge ImageCollections, note raw S1
+#   ImageCol = ImageCol.sort("Date")                                                                 # Order images by Date
+#   ImgList = ee.ImageCollection(ImageCol).toList(99999)                                             # Creates a list of the images to select from
 #   ImageColGM = ImgCol_gammaMap.merge(S2ImgCol)                                                     # Merge ImageCollections, note gammaS1
 #   ImageColGM = ImageColGM.sort("Date")                                                             # Order images by Date
 #   ImgListGM = ee.ImageCollection(ImageColGM).toList(99999)                                         # Creates a list of the d images to select from
-elif Satellite_selection == 'SENTINEL-1':                                                            # Create collections based just on S1
-   ImageCol = S1ImgCol                                                                              # ImageCollection = S1
+#elif Satellite_selection == 'SENTINEL-1':                                                            # Create collections based just on S1
+ #  ImageCol = S1ImgCol                                                                              # ImageCollection = S1
 #   ImgListGM = ee.ImageCollection(ImgCol_gammaMap).toList(99999)                                    # Creates a list of the gammacorrected images to select from
-elif  Satellite_selection == 'SENTINEL-2':                                                           # Create collections based just on S2
-     ImageCol = S2ImgCol                                                                            # ImageCollection = S2
-ImgList = ee.ImageCollection(ImageCol).toList(99999)                                               # Creates a list of the images to select from
+#elif  Satellite_selection == 'SENTINEL-2':                                                           # Create collections based just on S2
+ #    ImageCol = S2ImgCol                                                                            # ImageCollection = S2
+#ImgList = ee.ImageCollection(ImageCol).toList(99999)                                               # Creates a list of the images to select from
 #Datatable = pd.DataFrame(columns = ['Wreck_Name', 'Date', 'Oil_Area_m2','Low_Threshold','High_Threshold', 'Satellite','Comment'])# Empty dataframe for polygon oil spill area
 m = leafmap.Map(
     center=[float(lat), float(lon)],
