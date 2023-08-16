@@ -8,7 +8,7 @@ import streamlit as st
 import os
 import leafmap.foliumap as leafmap
 import folium.plugins as plugins
-
+ee.Initialize()
 """
 # Welcome to Streamlit!
 
