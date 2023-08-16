@@ -49,8 +49,8 @@ def Previous_button():
 
 if col2.button("Previous image"):
     Previous_button()
-StartDate   = '01-01-2014'
-EndDate = '01-04-2016'
+#StartDate   = '01-01-2014'
+#EndDate = '01-04-2016'
 #measure = plugins.MeasureControl(position="bottomleft", active_color="orange")
 #measure.add_to(m)
 
