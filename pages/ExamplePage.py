@@ -1,3 +1,4 @@
+from io import StringIO
 import ee
 from collections import namedtuple
 import altair as alt
