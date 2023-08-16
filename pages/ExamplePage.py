@@ -106,6 +106,6 @@ if ee.Image(img).getString('Satellite').getInfo()  == 'SENTINEL-1A' or ee.Image(
 else: img_params = {'min': 0,'max': 3000,'bands': ['B4','B3','B2']}                                # Otherwise select the RGB bands
  #IMgdate = img.date()                                                                               # Get the acquisition date of the image
  #date_string = IMgdate.format('YYYY-MM-dd').getInfo()                                               # Format the date as a string
- m.addLayer(img, img_params, 'Satellite Image',True)                                         # Add the image to the map
+m.addLayer(img, img_params, 'Satellite Image',True)                                         # Add the image to the map
 m.to_streamlit(height=600)
 
