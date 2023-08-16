@@ -98,7 +98,7 @@ m = leafmap.Map(
 # MultiMap.centerObject(geom, 10)                                                                    # Center the map on the wreck
 m.add_points_from_xy(wrecks, x="Longitude", y="Latitude")                                   # Add wreck locations
 #m = 0                                                                                              # Number to assign polygon number
-n = 0                                                                                              # Used to add or subtract to change the image
+#n = 0                                                                                              # Used to add or subtract to change the image
 #img = ee.Image(ee.List(ImgList).get(n))                                                            # Get the image from the image list to display the first image
 #if ee.Image(img).getString('Satellite').getInfo()  == 'SENTINEL-1A' or ee.Image(img).getString('Satellite').getInfo()  == 'SENTINEL-1B': # If S1 use below parmaeters
 #  img = ee.Image(ee.List(ImgList).get(n)).select('VV')                                              # Selects the VV band
