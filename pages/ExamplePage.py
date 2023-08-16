@@ -4,6 +4,8 @@ import math
 import pandas as pd
 import streamlit as st
 import os
+import leafmap.foliumap as leafmap
+import folium.plugins as plugins
 """
 # Welcome to Streamlit!
 
@@ -44,8 +46,18 @@ if col1.button("Next image"):
 def Previous_button():
     st.write(" Previous Button clicked!")
 
-if col2button("Previous image"):
+if col2.button("Previous image"):
     Previous_button()
+    
+m = leafmap.Map(
+    center=[float(lat), float(lon)],
+    zoom=int(zoom),
+    locate_control=True,
+    draw_control=True,
+    measure_control=False,
+)
+measure = plugins.MeasureControl(position="bottomleft", active_color="orange")
+measure.add_to(m)
 
 
 
