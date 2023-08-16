@@ -4,3 +4,4 @@ streamlit
 geopandas
 leafmap
 ee
+StringIO
